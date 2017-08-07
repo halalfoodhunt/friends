@@ -1,0 +1,32 @@
+<%= bootstrap_form_for(@friends_reward) do |f| %>
+  <% if @friends_reward.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@friends_reward.errors.count, "error") %> prohibited this friends_reward from being saved:</h2>
+
+      <ul>
+      <% @friends_reward.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.text_field :business_name %>
+  </div>
+  <div class="field">
+    <%= f.text_field :listing_link %>
+  </div>
+  <div class="field">
+    <%= f.text_area :address %>
+  </div>
+  <div class="field">
+    <%= f.text_area :friends_terms %>
+  </div>
+  <div class="field">
+  <%= f.file_field :featured_image, hide_label: true %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

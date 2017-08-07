@@ -1,0 +1,2 @@
+module FriendsCardsHelper
+end

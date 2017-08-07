@@ -1,0 +1,2 @@
+json.extract! registration, :id, :name, :ic_number, :date_of_birth, :contact_number, :email, :instagram_account, :facebook_ads, :facebook_newsfeed, :facebook_video, :instagram, :created_at, :updated_at
+json.url registration_url(registration, format: :json)

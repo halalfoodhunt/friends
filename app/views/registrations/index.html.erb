@@ -1,0 +1,36 @@
+<div class="container">
+        <h3 class="title">Listing registrations</h3>
+        <table class="table table-hover">
+          <thead>
+            <tr>
+             <th>Name</th>
+      <th>Ic number</th>
+      <th>Date of birth</th>
+      <th>Contact number</th>
+      <th>Email</th>
+      <th>Instagram account</th>
+      <th>Facebook ads</th>
+      <th>Facebook newsfeed</th>
+      <th>Facebook video</th>
+      <th>Instagram</th>
+              <th colspan="3"></th>
+            </tr>
+          </thead>
+          <tbody>
+             <% @registrations.each do |registration| %>
+              <tr>
+                <td><%= registration.name %></td>
+        <td><%= registration.ic_number %></td>
+        <td><%= registration.date_of_birth %></td>
+        <td><%= registration.contact_number %></td>
+        <td><%= registration.email %></td>
+        <td><%= registration.instagram_account %></td>
+        <td><%= registration.facebook_ads %></td>
+        <td><%= registration.facebook_newsfeed %></td>
+        <td><%= registration.facebook_video %></td>
+        <td><%= registration.instagram %></td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+      </div>

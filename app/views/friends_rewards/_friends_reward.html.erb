@@ -1,0 +1,41 @@
+<% @friends_rewards.each do |friends_reward| %>
+    <% unless friends_reward.friends_terms.blank? %>
+    <div class="col-xs-12 col-sm-6 col-md-3" >
+      <!--Rotating card-->
+      <div class="card-wrapper">
+        <div id="card-1" class="card-rotating effect__click">
+          <!--Front Side-->
+          <div class="face front">
+            <!-- Image-->
+            <div class="card-up">
+              <%= image_tag friends_reward.featured_image.url(:square), :class => "img-responsive" %>
+            </div>
+            <!--Avatar-->
+            <div class="avatar"><%= image_tag friends_reward.reward.icon.url(:large), :class => "img-circle img_responsive" %>
+            </div>
+            <!--Content-->
+            <div class="card-block" style="padding:0 5px 0 5px;">
+              <h5 style="margin:0;"><%= link_to friends_reward_path(friends_reward) do %><strong><%= friends_reward.business_name %></strong><% end %></h5>
+              <p style="margin:0;"><i class="fa fa-map-marker"></i> <%= friends_reward.address %></p><br>
+              <!--Triggering button-->
+              <p><a class="rotate-btn btn btn-primary btn-sm" data-card="card-1"> <i class="fa fa-repeat"></i> Read terms here.</a></p>
+            </div>
+          </div>
+          <!--/.Front Side-->
+          <!--Back Side-->
+          <div class="face back">
+            <!--Content-->
+            <h4><%= friends_reward.reward.name %></h4>
+            <hr>
+            <p><%= friends_reward.friends_terms %></p>
+            <hr>
+            <!--Triggering button-->
+            <a class="rotate-btn btn btn-primary btn-sm" data-card="card-1"><i class="fa fa-undo"></i> Click here to rotate back</a>
+          </div>
+          <!--/.Back Side-->
+        </div>
+      </div>
+      <!--/.Rotating card-->
+    </div>
+    <% end %>
+    <% end %>

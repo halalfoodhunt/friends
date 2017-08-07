@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Business name:</strong>
+  <%= @friends_reward.business_name %>
+</p>
+
+<p>
+  <strong>Listing link:</strong>
+  <%= @friends_reward.listing_link %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @friends_reward.address %>
+</p>
+
+<p>
+  <strong>Friends terms:</strong>
+  <%= @friends_reward.friends_terms %>
+</p>
+
+<%= link_to 'Edit', edit_friends_reward_path(@friends_reward) %> |
+<%= link_to 'Back', friends_rewards_path %>

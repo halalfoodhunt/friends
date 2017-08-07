@@ -1,0 +1,1 @@
+json.array! @friends_rewards, partial: 'friends_rewards/friends_reward', as: :friends_reward

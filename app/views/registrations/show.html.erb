@@ -1,0 +1,30 @@
+<div class="container-fluid friends-purchase">
+  <div class="container container-table">
+    <div class="row vertical-center-row">
+<div class="col-md-8 col-md-offset-2">
+  <center><a href="http://halalfoodhunt.com"><img class="img-responsive" src="http://friends.jumaiyah.com/wp-content/uploads/2016/04/HFFH_LOGO_2106-small.png" alt="Chania"></a></center><br>
+  <div class="panel panel-danger">
+  <div class="panel-heading">
+    <h3 class="panel-title">Invoice #000<%= @registration.id %></h3>
+  </div>
+  <div class="panel-body">
+    <p id="notice"><%= notice %></p>
+    <p>Thank you for subscribing with us! Cards are issued out every Monday. If you do not receive your card within 2 weeks of placing your order, please alert us at friends@halalfoodhunt.com.</p>
+     <ul class="list-group">
+    <li class="list-group-item"><strong>Name:</strong> <%= @registration.name %></li>
+    <li class="list-group-item"><strong>Payment method:</strong> <%= @registration.payment_method.capitalize %></li>
+    <li class="list-group-item"><strong>Shipping Address:</strong> <%= @registration.shipping_address %></li>
+  </ul>
+  </div>
+  <div class="panel-footer"><small>NON-TRANSFERABLE
+  <br>
+• The FRIENDS Card is strictly non‐transferable and member must present identification as and when required.<br>
+
+PERSONAL INFORMATION<br>
+• halalfoodhunt.com may use, collect and/or disclose your personal information that is necessary to verify your identity, process your membership card, deliver products and services to you, send out membership renewal reminders, analyse your preferences and inform you of upcoming promotions or events organised or co‐organised by halalfoodhunt.com.<br>
+• halalfoodhunt.com may disclose your personal information to third party service providers in connection with the above, where necessary, under a duty of confidentiality to halalfoodhunt.com.<br>
+• You may access and/or correct your personal information by calling our Membership Hotline at 6814 4923 or emailing us at friends@halalfoodhunt.com.</small></div>
+</div>
+  </div>
+</div>
+</div>

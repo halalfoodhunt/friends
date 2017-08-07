@@ -1,0 +1,1 @@
+json.partial! "friends_rewards/friends_reward", friends_reward: @friends_reward
